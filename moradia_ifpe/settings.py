@@ -166,4 +166,4 @@ SWAGGER_SETTINGS = {
    }
 }
 
-LOGIN_REDIRECT_URL = '/admin'
+LOGIN_REDIRECT_URL = '/dashboard/'
