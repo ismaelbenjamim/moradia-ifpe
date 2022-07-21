@@ -14,7 +14,6 @@ from pathlib import Path
 from decouple import config, Csv
 from dj_database_url import parse as dburl
 import django_heroku
-django_heroku.settings(locals())
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -170,3 +169,4 @@ SWAGGER_SETTINGS = {
 }
 
 LOGIN_REDIRECT_URL = '/dashboard/'
+django_heroku.settings(locals())
