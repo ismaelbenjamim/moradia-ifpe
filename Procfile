@@ -1,1 +1,1 @@
-web: gunicorn moradia_ifpe.wsgi --log-file -
+web: gunicorn moradia_ifpe.wsgi
