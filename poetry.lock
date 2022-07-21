@@ -103,6 +103,17 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "dj-static"
+version = "0.0.6"
+description = "Serve production static files with Django."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+static3 = "*"
+
+[[package]]
 name = "django"
 version = "3.2.14"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
@@ -471,6 +482,18 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
+name = "static3"
+version = "0.7.0"
+description = "A really simple WSGI way to serve static (or mixed) content."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+GenshiMagic = ["genshi"]
+KidMagic = ["kid"]
+
+[[package]]
 name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
@@ -529,7 +552,7 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "f39ea90f525f5cb54584cf7f71051861be7c30af859d3c632980a3951928f61e"
+content-hash = "5138b9a0a9ccc7b7e804b8831e77d715d8b5b1ca70013fc207546537b943c1d8"
 
 [metadata.files]
 asgiref = [
@@ -557,6 +580,7 @@ dj-database-url = [
     {file = "dj-database-url-0.5.0.tar.gz", hash = "sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163"},
     {file = "dj_database_url-0.5.0-py2.py3-none-any.whl", hash = "sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9"},
 ]
+dj-static = []
 django = []
 django-heroku = []
 django-rest-auth = []
@@ -785,6 +809,7 @@ sqlparse = [
     {file = "sqlparse-0.4.2-py3-none-any.whl", hash = "sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d"},
     {file = "sqlparse-0.4.2.tar.gz", hash = "sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae"},
 ]
+static3 = []
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},

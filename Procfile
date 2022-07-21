@@ -1,1 +1,1 @@
-web: gunicorn tw_clientes.wsgi
+web: gunicorn moradia_ifpe.wsgi:application --preload
