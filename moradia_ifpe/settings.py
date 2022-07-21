@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = [
-    ("""Admin""", 'contato@3ysoftwarehouse.com.br'),
+    ("""Admin""", 'ibsb@cin.ufpe.br'),
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
@@ -169,4 +169,5 @@ SWAGGER_SETTINGS = {
 }
 
 LOGIN_REDIRECT_URL = '/dashboard/'
+
 django_heroku.settings(locals())
