@@ -12,6 +12,7 @@ coreschema==0.0.4; python_version >= "3.6" \
 dj-database-url==0.5.0 \
     --hash=sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163 \
     --hash=sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9
+dj-static==0.0.6
 django-heroku==0.3.1
 django-rest-auth==0.9.5
 django==3.2.14; python_version >= "3.6"
@@ -183,6 +184,7 @@ six==1.16.0; python_version >= "2.7" and python_full_version < "3.0.0" or python
 sqlparse==0.4.2; python_version >= "3.6" \
     --hash=sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d \
     --hash=sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae
+static3==0.7.0
 uritemplate==4.1.1; python_version >= "3.6" \
     --hash=sha256:830c08b8d99bdd312ea4ead05994a38e8936266f84b9a7878232db50b044e02e \
     --hash=sha256:4346edfc5c3b79f694bccd6d6099a322bbeb628dbf2cd86eea55a456ce5124f0
