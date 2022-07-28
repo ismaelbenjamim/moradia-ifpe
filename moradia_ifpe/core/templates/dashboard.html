@@ -161,8 +161,6 @@
         <a href="#" class="ui item always-visible">
 
 <i class="user icon" aria-hidden="true"></i>
-
-
             <span style="margin-left: 5px">{{ user }}</span>
         </a>
         <a href="{% url 'logout' %}" class="ui item always-visible" style="margin-right: 5px">
@@ -216,41 +214,17 @@
 
 <h1>Ações disponíveis</h1>
 <div class="ui middle aligned selection divided list">
-
-    <div class="raised item segment" onclick="showConfirm('modal-comunicado_invento.process.ComunicadoDeInvencaoStartEvent')">
+    <div class="raised item segment" onclick="location.href='{% url "import_spreadsheet" %}'">
         <em class="ui avatar image list icon medium" data-emoji="clipboard"></em>
         <div class="content">
             <span class="header">
-                Sistema de Comunicação de Propriedade Intelectual - SafePI
+                Importar planilha de alunos
                 <span style="margin-left: 8px;">
 
                 </span>
             </span>
-            <div id="modal-comunicado_invento.process.ComunicadoDeInvencaoStartEvent" class="ui tiny modal">
-              <div class="ui icon header">
-                Comunique sua Patente, Marca, Registro de Software ou Desenho Industrial ao NIT-IFPE
-                  <br>
-                  (Sistema de Comunicação de Propriedade Intelectual - SafePI)
-              </div>
-              <div class="scrolling content">
-                <p>SafePI - Registrado sob o Nº BR512020001475-5</p>
-              </div>
-              <div class="actions">
-                <div class="ui deny button">
-                  <i class="remove icon" aria-hidden="true"></i>
-                  Cancelar
-                </div>
-                <a href="#" class="ui green ok button">
-                  <i class="play icon" aria-hidden="true"></i>
-                  Iniciar
-                </a>
-              </div>
-            </div>
-            <script>
-
-            </script>
             <div class="description">
-                Comunique sua Patente, Marca, Registro de Software ou Desenho Industrial ao NIT-IFPE
+                Importe a planilha com os dados dos alunos obtidos através do Sistema Fluxo IFPE
             </div>
         </div>
     </div>
