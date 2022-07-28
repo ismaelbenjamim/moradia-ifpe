@@ -131,6 +131,17 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-cors-headers"
+version = "3.13.0"
+description = "django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS)."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+Django = ">=3.2"
+
+[[package]]
 name = "django-heroku"
 version = "0.3.1"
 description = "This is a Django library for Heroku apps."
@@ -466,6 +477,25 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
+name = "serializer"
+version = "0.2.1"
+description = "Easy object serialization. Mimics RoR ActiveRecord serializer."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+simplejson = "*"
+
+[[package]]
+name = "simplejson"
+version = "3.17.6"
+description = "Simple, fast, extensible JSON encoder/decoder for Python"
+category = "main"
+optional = false
+python-versions = ">=2.5, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -552,7 +582,7 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "5138b9a0a9ccc7b7e804b8831e77d715d8b5b1ca70013fc207546537b943c1d8"
+content-hash = "4142d9b181118e1911a279d3b5aad775d87efaafc5df4f9742991168ec8f034a"
 
 [metadata.files]
 asgiref = [
@@ -582,6 +612,7 @@ dj-database-url = [
 ]
 dj-static = []
 django = []
+django-cors-headers = []
 django-heroku = []
 django-rest-auth = []
 djangorestframework = [
@@ -801,6 +832,8 @@ requests = []
     {file = "ruamel.yaml.clib-0.2.6-cp39-cp39-win_amd64.whl", hash = "sha256:825d5fccef6da42f3c8eccd4281af399f21c02b32d98e113dbc631ea6a6ecbc7"},
     {file = "ruamel.yaml.clib-0.2.6.tar.gz", hash = "sha256:4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"},
 ]
+serializer = []
+simplejson = []
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
