@@ -1,0 +1,140 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block main %}
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin">
+                <div class="row">
+                    <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                        <h3 class="font-weight-bold">Bem vindo(a) {{ user.get_name }}!</h3>
+                        <!--<h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span
+                                class="text-primary">3 unread alerts!</span></h6>-->
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="justify-content-end d-flex">
+                            <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                                <button class="btn btn-sm btn-light bg-white border-secondary">
+                                    <i class="mdi mdi-calendar"></i> Data de hoje <br> 18/09/22
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4>Campus de <span class="font-weight-bolder">Belo Jardim</span></h4>
+        <div class="row">
+            <div class="col-md-6 mb-3 stretch-card">
+                <div class="card tale-bg" >
+                    <div class="card-people mt-auto">
+                        <!--<div class="row">
+                            <div class="col-6">
+                                <h4 class="ml-4"><span class="font-weight-bolder">Campus</span><br>Belo Jardim</h4>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="btn btn-block btn-success">Guia de Análise Socioeconômica</a>
+                            </div>
+                        </div>-->
+                        <img src="{% static 'skydash/images/dashboard/people.svg' %}" alt="people">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3 grid-margin transparent">
+                <div class="row">
+                    <div class="col-md-6 mb-4 stretch-card transparent">
+                        <div class="card card-tale">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="btn btn-light btn-icon" style="padding-top: 12px">
+                                            <i class="ti-files"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 text-right">
+                                        <p class="font-weight-bold">Planilhas submetidas</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 text-right mb-2">
+                                        <p class="fs-30 font-weight-bold mb-2">2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4 stretch-card transparent">
+                        <div class="card card-primary">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="btn btn-light btn-icon" style="padding-top: 12px">
+                                            <i class="ti-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 text-right">
+                                        <p class="font-weight-bold">Candidatos inscritos</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 text-right mb-2">
+                                        <p class="fs-30 font-weight-bold mb-2">125</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4 stretch-card transparent">
+                        <div class="card card-primary">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="btn btn-light btn-icon" style="padding-top: 12px">
+                                            <i class="ti-bar-chart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 text-right">
+                                        <p class="font-weight-bold">Análises em pendente</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 text-right mb-2">
+                                        <p class="fs-30 font-weight-bold mb-2">41</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4 stretch-card transparent">
+                        <div class="card card-tale">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="btn btn-light btn-icon" style="padding-top: 12px">
+                                            <i class="ti-check"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 text-right">
+                                        <p class="font-weight-bold">Análises finalizadas</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 text-right mb-2">
+                                        <p class="fs-30 font-weight-bold mb-2">58</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <a href="{% url 'guide' %}" class="btn btn-rounded btn-success">Guia de Análise Socioeconômica</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

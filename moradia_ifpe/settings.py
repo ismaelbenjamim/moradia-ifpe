@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 from decouple import config, Csv
 from dj_database_url import parse as dburl
@@ -56,11 +56,12 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
     'drf_yasg',
-    'corsheaders',
 
     # Own Apps
     'moradia_ifpe.core.apps.CoreConfig',
-    'moradia_ifpe.spreadsheet.apps.SpreadsheetConfig',
+    'moradia_ifpe.aluno',
+    'moradia_ifpe.user',
+    'moradia_ifpe.dashboard',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ ROOT_URLCONF = 'moradia_ifpe.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -138,7 +139,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = f'{BASE_DIR}/staticfiles'
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = f'{BASE_DIR}/mediafiles'
 
@@ -174,5 +177,7 @@ SWAGGER_SETTINGS = {
 CORS_ALLOW_ALL_ORIGINS = True
 
 LOGIN_REDIRECT_URL = '/dashboard/'
+
+AUTH_USER_MODEL = 'user.User'
 
 django_heroku.settings(locals())

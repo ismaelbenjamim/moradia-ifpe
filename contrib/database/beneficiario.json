@@ -1,0 +1,23 @@
+[
+  {
+    "model": "aluno.Beneficiario",
+    "pk": 1,
+    "fields": {
+      "descricao": "Sim, participamos do Bolsa Família"
+    }
+  },
+  {
+    "model": "aluno.Beneficiario",
+    "pk": 2,
+    "fields": {
+      "descricao": "Sim, participamos do Benefício de Prestação Continuada - BPC"
+    }
+  },
+  {
+    "model": "aluno.Beneficiario",
+    "pk": 3,
+    "fields": {
+      "descricao": "Não"
+    }
+  }
+]

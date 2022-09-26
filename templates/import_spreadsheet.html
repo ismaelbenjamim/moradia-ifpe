@@ -1,0 +1,25 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Importação de planilha{% endblock %}
+
+{% block main %}
+    <div class="content-wrapper">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Submissão de planilha</h4>
+                    <p class="card-description">
+                        Formulário de submissão de planilhas geradas no Sistema Fluxo IFPE.
+                    </p>
+                    <form method="post" enctype="multipart/form-data" class="forms-sample">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary mr-2">Enviar</button>
+                        <a href="{% url 'dashboard' %}" class="btn btn-light">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

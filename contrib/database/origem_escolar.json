@@ -1,0 +1,16 @@
+[
+  {
+    "model": "aluno.OrigemEscolar",
+    "pk": 1,
+    "fields": {
+      "descricao": "Escola particular"
+    }
+  },
+  {
+    "model": "aluno.OrigemEscolar",
+    "pk": 2,
+    "fields": {
+      "descricao": "Escola pública"
+    }
+  }
+]
