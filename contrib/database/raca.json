@@ -1,0 +1,30 @@
+[
+  {
+    "model": "aluno.Raca",
+    "pk": 1,
+    "fields": {
+      "descricao": "Preto"
+    }
+  },
+  {
+    "model": "aluno.Raca",
+    "pk": 2,
+    "fields": {
+      "descricao": "Branco"
+    }
+  },
+  {
+    "model": "aluno.Raca",
+    "pk": 3,
+    "fields": {
+      "descricao": "Amarelo"
+    }
+  },
+  {
+    "model": "aluno.Raca",
+    "pk": 4,
+    "fields": {
+      "descricao": "Indígena"
+    }
+  }
+]

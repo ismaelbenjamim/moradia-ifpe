@@ -1,0 +1,16 @@
+[
+  {
+    "model": "aluno.OrientacaoSexual",
+    "pk": 1,
+    "fields": {
+      "descricao": "Homosexual"
+    }
+  },
+  {
+    "model": "aluno.OrientacaoSexual",
+    "pk": 2,
+    "fields": {
+      "descricao": "Heterosexual"
+    }
+  }
+]

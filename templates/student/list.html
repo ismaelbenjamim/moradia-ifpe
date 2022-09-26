@@ -1,0 +1,196 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Análise Socioeconômica{% endblock %}
+
+{% block main %}
+    <div class="content-wrapper">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Análise Socioeconômica</h4>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-responsive">
+                                <div id="order-listing_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="dataTables_length" id="order-listing_length"><label>Limite de
+                                                exibição <select name="order-listing_length"
+                                                                 aria-controls="order-listing"
+                                                                 class="custom-select custom-select-sm form-control">
+                                                    <option value="5">5</option>
+                                                    <option value="10">10</option>
+                                                    <option value="15">15</option>
+                                                    <option value="-1">Todos</option>
+                                                </select> alunos</label></div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div id="order-listing_filter" class="dataTables_filter"><label><input
+                                                    type="search" class="form-control" placeholder="Buscar"
+                                                    aria-controls="order-listing"></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table id="order-listing" class="table dataTable no-footer" role="grid"
+                                                   aria-describedby="order-listing_info">
+                                                <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="order-listing"
+                                                        rowspan="1" colspan="1" style="width: 68.5px;"
+                                                        aria-sort="ascending"
+                                                        aria-label="Order #: activate to sort column descending">CPF
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                        rowspan="1" colspan="1" style="width: 116.533px;"
+                                                        aria-label="Purchased On: activate to sort column ascending">
+                                                        Nome completo
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                        rowspan="1" colspan="1" style="width: 83.7167px;"
+                                                        aria-label="Customer: activate to sort column ascending">
+                                                        Curso
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                        rowspan="1" colspan="1" style="width: 71px;"
+                                                        aria-label="Ship to: activate to sort column ascending">
+                                                        Origem escolar
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                        rowspan="1" colspan="1" style="width: 89.2167px;"
+                                                        aria-label="Base Price: activate to sort column ascending">
+                                                        Orientação sexual
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                        rowspan="1" colspan="1" style="width: 131.8px;"
+                                                        aria-label="Purchased Price: activate to sort column ascending">
+                                                        Passo
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                        rowspan="1" colspan="1" style="width: 80.8px;"
+                                                        aria-label="Status: activate to sort column ascending">
+                                                        Pontuação
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                        rowspan="1" colspan="1" style="width: 77.8333px;"
+                                                        aria-label="Actions: activate to sort column ascending">Actions
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="alunos">
+
+                                                {% for student in object_list %}
+                                                    <tr>
+                                                        <td class="sorting_1">{{ student.cpf }}</td>
+                                                        <td>{{ student.nome_completo }}</td>
+                                                        <td>{{ student.curso }}</td>
+                                                        <td>{{ student.origem_escolar }}</td>
+                                                        <td>{{ student.orientacao_sexual }}</td>
+                                                        <td><label class="badge badge-info">{{ student.passo }}</label>
+                                                        </td>
+                                                        <td>{{ student.get_point }}</td>
+                                                        <td>
+                                                            <button class="btn btn-outline-primary">View</button>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-5">
+                                            <div class="form-group" data-select2-id="7">
+                                                <label>Multiple select using select 2</label>
+                                                <select class="js-example-basic-multiple w-100 select2-hidden-accessible"
+                                                        multiple="" data-select2-id="4" tabindex="-1"
+                                                        aria-hidden="true">
+                                                    <option value="AL" data-select2-id="18">Alabama</option>
+                                                    <option value="WY" data-select2-id="19">Wyoming</option>
+                                                    <option value="AM" data-select2-id="20">America</option>
+                                                    <option value="CA" data-select2-id="21">Canada</option>
+                                                    <option value="RU" data-select2-id="22">Russia</option>
+                                                </select><span
+                                                    class="select2 select2-container select2-container--default select2-container--below select2-container--focus select2-container--open"
+                                                    dir="ltr" data-select2-id="5" style="width: 718.5px;"><span
+                                                    class="selection"><span
+                                                    class="select2-selection select2-selection--multiple"
+                                                    role="combobox" aria-haspopup="true" aria-expanded="true"
+                                                    tabindex="-1" aria-disabled="false" aria-owns="select2-i5ur-results"
+                                                    aria-activedescendant="select2-i5ur-result-fz74-AL"><ul
+                                                    class="select2-selection__rendered"><li
+                                                    class="select2-search select2-search--inline"><input
+                                                    class="select2-search__field" type="search" tabindex="0"
+                                                    autocomplete="off" autocorrect="off" autocapitalize="none"
+                                                    spellcheck="false" role="searchbox" aria-autocomplete="list"
+                                                    placeholder="" style="width: 0.75em;"
+                                                    aria-controls="select2-i5ur-results"
+                                                    aria-activedescendant="select2-i5ur-result-fz74-AL"></li></ul></span></span><span
+                                                    class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-5">
+                                            <div class="dataTables_info" id="order-listing_info" role="status"
+                                                 aria-live="polite">Showing 1 to 10 of 10 entries
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div class="dataTables_paginate paging_simple_numbers"
+                                                 id="order-listing_paginate">
+                                                <ul class="pagination">
+                                                    <li class="paginate_button page-item previous disabled"
+                                                        id="order-listing_previous"><a href="#"
+                                                                                       aria-controls="order-listing"
+                                                                                       data-dt-idx="0" tabindex="0"
+                                                                                       class="page-link">Previous</a>
+                                                    </li>
+                                                    <li class="paginate_button page-item active"><a href="#"
+                                                                                                    aria-controls="order-listing"
+                                                                                                    data-dt-idx="1"
+                                                                                                    tabindex="0"
+                                                                                                    class="page-link">1</a>
+                                                    </li>
+                                                    <li class="paginate_button page-item next disabled"
+                                                        id="order-listing_next"><a href="#"
+                                                                                   aria-controls="order-listing"
+                                                                                   data-dt-idx="2" tabindex="0"
+                                                                                   class="page-link">Next</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script>
+        function getAlunos(query_params) {
+            var url = window.location.origin + "/api/aluno/"
+            if (query_params) {
+                url = url + "?" + query_params
+            }
+            axios({
+                method: 'get',
+                url: url,
+                headers: {
+                    'Authorization': 'Token 3119ef6b4701ac7ccc376087d5afda25e43ca0e9'
+                }
+            }).then(function (response) {
+                var response_str = "";
+                for (const aluno_id in response.data) {
+                    const aluno = response.data[aluno_id]
+                    response_str = response_str + '<tr><td class="sorting_1">' + aluno.cpf + '</td><td>' + aluno.nome_completo + '</td><td>' + aluno.curso + '</td><td>' + aluno.origem_escolar + '</td> <td>' + aluno.orientacao_sexual + '</td> <td><label class="badge badge-info">' + aluno.passo + '</label> </td> <td>' + aluno.pontuacao + '</td> <td> <button class="btn btn-outline-primary">View</button> </td></tr>';
+                }
+                $("#alunos").html(response_str);
+
+            });
+        }
+    </script>
+{% endblock %}

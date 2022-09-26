@@ -1,0 +1,9 @@
+[
+  {
+    "model": "aluno.Curso",
+    "pk": 1,
+    "fields": {
+      "nome": "TÉCNICO EM SEGURANÇA DO TRABALHO"
+    }
+  }
+]

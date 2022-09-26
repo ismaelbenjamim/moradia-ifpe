@@ -1,0 +1,30 @@
+[
+  {
+    "model": "aluno.Passo",
+    "pk": 1,
+    "fields": {
+      "descricao": "Concessão da bolsa"
+    }
+  },
+  {
+    "model": "aluno.Passo",
+    "pk": 2,
+    "fields": {
+      "descricao": "Esperar data recurso"
+    }
+  },
+  {
+    "model": "aluno.Passo",
+    "pk": 3,
+    "fields": {
+      "descricao": "Preencher relato de vida"
+    }
+  },
+  {
+    "model": "aluno.Passo",
+    "pk": 4,
+    "fields": {
+      "descricao": "Adicionar informações do familiar"
+    }
+  }
+]

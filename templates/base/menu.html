@@ -1,0 +1,40 @@
+{% load static %}
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard' %}">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'aluno_list' 'ultimo' %}">
+                <i class="icon-paper menu-icon"></i>
+                <span class="menu-title"><p class="mb-1">Análise</p>Socioeconômica</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">
+                <i class="icon-paper menu-icon"></i>
+                <span class="menu-title">Resultado parcial</span>
+            </a>
+        </li>
+        <!--<li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="icon-cloud-upload menu-icon"></i>
+                <span class="menu-title">Alunos</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link"
+                                            href="{% static 'skydash/pages/ui-features/buttons.html' %}">Listar</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link"
+                                            href="{% static 'skydash/pages/ui-features/dropdowns.html' %}">Adicionar</a>
+                    </li>
+                </ul>
+            </div>
+        </li>-->
+    </ul>
+</nav>

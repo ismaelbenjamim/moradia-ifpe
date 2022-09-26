@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Importação de planilha{% endblock %}
+
+{% block main %}
+    <div class="content-wrapper">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Submissão de planilha</h4>
+                    <p class="mb-4">
+                        {{ message }}
+                    </p>
+                    <button type="submit" class="btn btn-rounded btn-primary mr-2">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
